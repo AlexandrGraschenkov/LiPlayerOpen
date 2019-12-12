@@ -49,6 +49,8 @@ playerManager.addEventListener(
 
     const audioTracksManager = playerManager.getAudioTracksManager();
     const audioTracks = audioTracksManager.getTracks();
+    console.log(audioTracks);
+    console.log("••••");
     audioTracksManager.setActiveById(audioTracks[-1].trackId);
 });
 
