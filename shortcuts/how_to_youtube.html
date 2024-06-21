@@ -4,11 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007AFF;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #005bb5;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Open this page using your iOS device</h1>
+        <p>If you have the app installed, <a href="liplayer://youtube.faq">click here to open it</a>.</p>
+        <p>If you do not have the app installed, you can download it from the App Store:</p>
+        <a class="cta-button" href="https://apps.apple.com/app/id1448868559">Download the App</a>
+    </div>
     <script>
-        window.location.href = 'liplayer://youtube.faq';
+        if (navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('iPad')) {
+            window.location.href = 'liplayer://youtube.faq';
+        }
     </script>
-    <p>If you are not redirected, <a href="liplayer://youtube.faq">click here</a>.</p>
 </body>
 </html>
