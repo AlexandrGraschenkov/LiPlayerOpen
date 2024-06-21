@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+}
+.container {
+    background-color: #fff;
+    padding: 10px 40px 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #333;
+}
+p {
+    color: #666;
+}
+a {
+    color: #007AFF;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007AFF;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.cta-button:hover {
+    background-color: #005bb5;
+}
+.app-info {
+    background: rgba(250, 250, 255, 1);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin: 20px auto 0px auto; /* Center horizontally by setting left and right margins to auto */
+    width: 360px;
+}
+.container img {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+/*            margin-right: 20px;*/
+}
+.app-details {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+.app-name {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    text-align: left;
+}
+.app-subtitle {
+    color: #777;
+    margin-left: 10px;
+    text-align: left;
+}
+.download-button {
+    background-color: #007aff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.manual-link {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #007aff;
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to watch videos from Youtube with Liquid Player?</title>
+    <title>How to move files to Documents in Liquid Player?</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -12,7 +12,8 @@
         <p>If the app didn't open automatically, try <a id="faq-link">clicking this link</a>.</p>
 
         <br>
-        <iframe src="https://www.youtube.com/embed/tu89dHQeEA8?autoplay=1" allow="autoplay;fullscreen;" width="220px" height="480px"></iframe>
+        <p>Or you can use this workaround:</p>
+        <iframe src="https://www.youtube.com/embed/G-3A-6_6DaI?autoplay=1" allow="autoplay;fullscreen;" width="220px" height="480px"></iframe>
         <br>
 
         <p>If you do not have the app installed, you can download it from the App Store:</p>
@@ -30,7 +31,7 @@
     </div>
     
     <script>
-        const faqLink = 'liplayer://translate.faq';
+        const faqLink = 'liplayer://downloads.faq';
         document.getElementById('faq-link').setAttribute('href', faqLink);
 
         if (navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('iPad')) {
