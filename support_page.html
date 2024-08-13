@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Player Support</title>
+    <style>
+        body {
+            background-color: #1F1F39;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .app-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+        }
+        .title {
+            font-size: 32px;
+            color: #FB9506;
+        }
+        .subtitle {
+            font-size: 24px;
+            color: #FFFFFF;
+        }
+        .screenshots {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .screenshot {
+            border-radius: 10px;
+        }
+        .contact {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .contact a {
+            color: #FB9506;
+            background-color: #2D2D4D;
+            padding: 10px 60px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .contact img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+        .faq-section {
+            margin: 20px 0;
+        }
+        .faq-item {
+            margin: 10px 0;
+        }
+        .faq-question {
+            cursor: pointer;
+            background-color: #2D2D4D;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .faq-answer {
+            display: none;
+            margin-top: 5px;
+            padding: 1px 10px;
+            background-color: #3A3A57;
+            border-radius: 5px;
+        }
+        .faq-answer img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+    </style>
+    <script>
+        function toggleAnswer(id) {
+            const answers = document.querySelectorAll('.faq-answer');
+            answers.forEach(answer => {
+                if (answer.id === id) {
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                } else {
+                    answer.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d2/2f/28/d22f2867-c65b-6a61-c378-61beaee4937a/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.jpeg/512x512bb.jpg" alt="App Icon">
+            <h1 class="title">Liquid Player: Watch and Learn</h1>
+        </div>
+
+        <div class="screenshots">
+            <img class="screenshot" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/b9/a5/52/b9a552f3-6e54-1d27-6b12-cd09637c9ecc/ee4ffbdf-aa0d-47a1-a287-e5698e05574a_screen_2-3.jpg/406x228bb.jpg" alt="Screenshot">
+            <img class="screenshot" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/41/fb/4e/41fb4e1b-92f9-c292-a2f2-9c3b9d4e897f/37ebc952-d2dc-4de7-86b4-fdb4033296d1_screen_2-1.jpg/406x228bb.jpg" alt="Screenshot">
+            <img class="screenshot" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/31/28/50/312850d0-bf96-b1b3-a7cf-965a4f7295f7/fa8cfafc-e6f6-403f-a781-0d2282fd649f_screen_2-2.jpg/406x228bb.jpg" alt="Screenshot">
+            <img class="screenshot" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/bf/7e/63/bf7e63ae-6dad-95a5-066b-aacc3bd2fe7e/32699374-7193-4826-9396-ce42c365c55a_screen_2.jpg/406x228bb.jpg" alt="Screenshot">
+        </div>
+        <h2 class="subtitle">Contact Information</h2>
+        <div class="contact">
+            <a href="https://x.com/sharrikk" target="_blank"><img src="https://img.icons8.com/ios-filled/50/FB9506/twitter.png" alt="Twitter Icon"> Twitter</a>
+            <a href="mailto:alexandr.graschenkov91@gmail.com"><img src="https://img.icons8.com/ios-glyphs/50/FB9506/email.png" alt="Email Icon"> Email</a>
+            <a href="https://t.me/liquid_player_chat" target="_blank"><img src="https://img.icons8.com/ios-filled/50/FB9506/telegram.png" alt="Telegram Icon"> Telegram</a>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="subtitle">FAQ</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer('faq1')">What information is collected from users?</div>
+                <div class="faq-answer" id="faq1">
+                    <p>App collects 2 types of information:</p>
+                    <ul>
+                        <li>Usage of app features to analyze demand within the app, and identify less popular features. This helps in determining the product's development direction.</li>
+                        <li>When the app crashes, the server sends the sequence of function calls that led to the crash, along with the method of app crashing.</li>
+                    </ul>
+                    <p>All this information is used solely for analyzing anonymous user behavior and improving app performance. No information is shared with any third parties. If you do not want the app to track usage information, turn off app analytics below.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer('faq2')">How to transfer files from a computer?</div>
+                <div class="faq-answer" id="faq2">
+                    <p>You can transfer files from your computer in three ways:</p>
+                    <ul>
+                        <li>Using AirDrop in the Apple ecosystem: Click "Share File" -> AirDrop -> choose your device.</li>
+                        <li>Via WiFi: Connect both devices to the same WiFi -> on the file screen, tap "Add Video" -> "via WiFi" -> open the address on your computer from the mobile device -> drag and drop your files.</li>
+                        <li>Using a cable: Open your mobile device in Files -> find the Liquid Player app in the list -> drag and drop your videos.</li>
+                    </ul>
+                    <!-- <p><a href="https://www.youtube.com/watch?v=BGz9PyX7gYc" style="color: #FB9506;"><img src="https://img.icons8.com/ios-glyphs/50/FB9506/play.png" alt="Play Icon">Video Example</a></p> -->
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer('faq3')">How to translate video subtitles?</div>
+                <div class="faq-answer" id="faq3">
+                    <p><a href="https://alexandrgraschenkov.github.io/LiPlayerOpen/shortcuts/how_to_translate.html" style="color: #FB9506;">Video Example</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
