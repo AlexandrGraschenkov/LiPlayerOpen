@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Special Gift!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Open this page using your iOS device 🎉</h1>
+        <p id="offer-text">Special offer: 🎁</p>
+        
+        <div class="gift-container">
+            <img src="gift.png" alt="Special Gift" style="height: 360px; width: 400px;" class="gift-image">
+        </div>
+        
+        <p>If the app didn't open automatically, try <a id="gift-link">clicking this link</a>.</p>
+
+        <p>If you do not have the app installed, you can download it from the App Store:</p>
+        
+        <div class="app-info">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d2/2f/28/d22f2867-c65b-6a61-c378-61beaee4937a/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.jpeg/512x512bb.jpg" alt="Liquid Player Icon">
+            <div class="app-details">
+                <div class="app-name">Liquid Player</div>
+                <div class="app-subtitle">Watch, Learn, Enjoy</div>
+            </div>
+            <a href="https://apps.apple.com/app/id1448868559">
+                <button class="download-button">Download</button>
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        const offer = decodeURIComponent(window.location.hash.substring(1));
+        const giftLink = `liplayer://gift#${offer}`;
+        document.getElementById('gift-link').setAttribute('href', giftLink);
+        document.getElementById('offer-text').textContent = `🎁 Your special offer: ${offer}`;
+
+        if (navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('iPad')) {
+            window.location.href = giftLink;
+        }
+    </script>
+</body>
+</html>
