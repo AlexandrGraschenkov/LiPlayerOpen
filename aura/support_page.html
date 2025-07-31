@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraLens Support</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #E6EFFF, #CCDAFF);
+            background-size: cover;
+            background-attachment: fixed;
+            color: #495999;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+        }
+
+        .title {
+            font-size: 32px;
+            color: #495999;
+            flex: 1;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #495999;
+        }
+
+        .screenshots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .screenshot {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            color: #FFFFFF;
+            background-color: #495999;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1; /* Ensure buttons fill up space evenly */
+            margin: 5px; /* Space between buttons */
+        }
+
+        .contact img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .faq-section {
+            margin: 20px 0;
+        }
+
+        .faq-item {
+            margin: 10px 0;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            background-color: #E6EFFF;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 5px;
+            padding: 1px 10px;
+            background-color: #CCDAFF;
+            border-radius: 5px;
+        }
+
+        .faq-question::after {
+            content: '▼';
+            color: #495999;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        .faq-question.open::after {
+            content: '▲';
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+
+            .screenshots {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .screenshot {
+                width: 80%;
+                max-width: 300px;
+            }
+
+            .contact {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .contact a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .footer-links {
+                text-align: center; /* Centers the links */
+                margin-top: 20px; /* Adds some space above the links */
+            }
+
+            .footer-links a {
+                display: inline-flex; /* Aligns the icon and text horizontally */
+                align-items: center; /* Centers icon and text vertically */
+                margin: 0 15px; /* Adds spacing between links */
+                font-size: 16px; /* Increases font size */
+                font-family: 'Arial', sans-serif; /* Custom font */
+                color: #495999; /* Text color */
+                text-decoration: none; /* Removes underline */
+                transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+            }
+
+            .footer-links a:hover {
+                color: #3d5a80; /* Changes text color on hover */
+                transform: translateY(-5px); /* Slightly lifts the link on hover */
+            }
+
+            .footer-links a img {
+                margin-right: 8px; /* Space between icon and text */
+                transition: transform 0.3s ease; /* Smooth transition for icon scale */
+            }
+
+            .footer-links a:hover img {
+                transform: scale(1.2); /* Enlarges the icon on hover */
+            }
+        }
+    </style>
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const question = document.querySelector(`#${id} .faq-question`);
+
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                question.classList.remove('open');
+            } else {
+                answer.style.display = 'block';
+                question.classList.add('open');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="app-icon" src="resources/aura_icon.png" alt="App Icon">
+            <h1 class="title">AuraLens: AI Photo Editor</h1>
+        </div>
+
+        <div class="screenshots">
+            <img class="screenshot" src="resources/aura_screenshot_1.jpg" alt="Screenshot">
+            <img class="screenshot" src="resources/aura_screenshot_2.jpg" alt="Screenshot">
+        </div>
+
+        <h2 class="subtitle">Contact Information</h2>
+        <div class="contact">
+            <a href="https://x.com/sharrikk" target="_blank"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/twitter.png" alt="Twitter Icon"> Twitter</a>
+            <a href="mailto:alexandr.graschenkov91@gmail.com"><img src="https://img.icons8.com/ios-glyphs/50/FFFFFF/email.png" alt="Email Icon"> Email</a>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="subtitle">FAQ – AuraLens</h2>
+        
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer('faq1')">What is AuraLens?</div>
+                <div class="faq-answer" id="faq1">
+                    <p>AuraLens is an AI-powered photo editor that transforms your images using advanced neural networks. Some effects are processed directly on your device, while others require secure processing on our servers for the best possible quality.</p>
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer('faq2')">What are lenses and how do they work?</div>
+                <div class="faq-answer" id="faq2">
+                    <p>In AuraLens, <strong>1 lens = 1 photo edit</strong>. You need a lens each time you apply an AI-powered effect that requires processing.</p>
+                    <ul>
+                        <li><strong>Free users</strong> receive <strong>1 lens per day</strong>.</li>
+                        <li><strong>Subscribers</strong> get <strong>100 lenses per week</strong> as part of their plan.</li>
+                        <li>If you run out of lenses, you can purchase <strong>permanent lenses</strong> separately — they never expire and are available anytime.</li>
+                    </ul>
+                    <p>We use lenses to cover the cost of server-side processing. Each image edit requires computing power, which comes at a real cost for us. This system helps keep the app sustainable while offering generous access to both free and paid users.</p>
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer('faq3')">Are my photos uploaded to the cloud?</div>
+                <div class="faq-answer" id="faq3">
+                    <p>Only when necessary. Some features run entirely on your device, ensuring your data stays private. Others — especially those requiring more intensive AI processing — are securely handled on our servers and deleted shortly after processing.</p>
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer('faq4')">What happens if I run out of lenses?</div>
+                <div class="faq-answer" id="faq4">
+                    <p>You can wait for your daily lens refill (for free users), enjoy weekly lens refills (if you’re a subscriber), or purchase additional <strong>permanent lenses</strong> that remain available until you use them. No pressure — you choose what works best for you.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer links section -->
+        <div class="footer-links">
+            <a href="terms.html">
+                <img src="https://img.icons8.com/?size=20&id=89964&format=png&color=495999" alt="Terms Icon"> 
+                Terms
+            </a>
+            <a href="privacy_policy.html">
+                <img src="https://img.icons8.com/?size=20&id=jBzielDa22bd&format=png&color=495999" alt="Privacy Policy Icon"> 
+                Privacy Policy
+            </a>
+        </div>
+    </div>
+</body>
+</html>
